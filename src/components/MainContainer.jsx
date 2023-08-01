@@ -1,6 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import CardSection from "./CardSection";
 import Layout from "./Layout";
+import TableSection from "./TableSection";
 
 const MainContainer = () => {
   const homeItems = [
@@ -136,6 +137,29 @@ Now is the time to respond with generosity as we give towards the Costly Generos
       link: "/workshop/workshop-4.jpeg",
     },
   ];
+  const breakoutItems = {
+    headers: ["Country/Region", "Room Number"],
+    body: [
+      ["India", "120"],
+      ["Chinese World", "119"],
+      ["Hong Kong", "103"],
+      ["Thailand", "104"],
+      ["Mongolia", "105"],
+      ["English Speaking SEA", "106"],
+      ["South Asia", "107"],
+      ["Mainland SEA", "108"],
+      ["Pakistan", "109"],
+      ["Korea", "110"],
+      ["Taiwan", "111"],
+      ["Philippines", "112"],
+      ["Japan", "115"],
+      ["Vietnam", "116"],
+      ["Central Asia", "117"],
+      ["MENA", "Novotel Meeting Room"],
+      ["Indonesia", "118"],
+      ["Free to Choose", "--"],
+    ],
+  };
   const venueItems = [
     {
       title: "Impact Center Floor Map",
@@ -237,9 +261,7 @@ Now is the time to respond with generosity as we give towards the Costly Generos
         path="/breakouts"
         element={
           <Layout title="Country/Region Breakout Room Assignments">
-            <p className="text-center">
-              Country/Region Breakout Room Assignments
-            </p>
+            <TableSection items={breakoutItems} />
           </Layout>
         }
       />
