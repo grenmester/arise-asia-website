@@ -1,4 +1,6 @@
 import { Route, Routes } from "react-router-dom";
+import { plenarySpeakers, workshopSpeakers } from "../data/speakers";
+import AccordionSection from "./AccordionSection";
 import CardSection from "./CardSection";
 import Layout from "./Layout";
 import TableSection from "./TableSection";
@@ -221,7 +223,7 @@ Now is the time to respond with generosity as we give towards the Costly Generos
         path="/speakers/plenary"
         element={
           <Layout title="Plenary Speakers">
-            <p className="text-center">Plenary Speakers</p>
+            <AccordionSection items={plenarySpeakers} />
           </Layout>
         }
       />
@@ -229,7 +231,7 @@ Now is the time to respond with generosity as we give towards the Costly Generos
         path="/speakers/workshop"
         element={
           <Layout title="Workshop Speakers">
-            <p className="text-center">Workshop Speakers</p>
+            <AccordionSection items={workshopSpeakers} />
           </Layout>
         }
       />
