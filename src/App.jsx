@@ -1,5 +1,12 @@
+import { BrowserRouter } from "react-router-dom";
+import MainContainer from "./components/MainContainer";
+
 const App = () => (
-  <h1 className="text-3xl font-bold underline">Arise Asia Info</h1>
+  <div className="bg-gradient-to-br from-yellow-300 to-red-300">
+    <BrowserRouter>
+      <MainContainer />
+    </BrowserRouter>
+  </div>
 );
 
 export default App;
