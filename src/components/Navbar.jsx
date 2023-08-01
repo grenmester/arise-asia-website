@@ -58,6 +58,7 @@ const Navbar = () => {
             className="text-lg text-orange-500 font-heading btn btn-ghost"
           >
             <img src="/public/logo.svg" width={36} height={36} />
+            <p className="block text-sm sm:hidden">Arise Asia</p>
             <p className="hidden sm:block">Arise Asia 2023 Info</p>
           </Link>
         </div>
